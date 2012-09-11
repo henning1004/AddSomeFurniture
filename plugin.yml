@@ -1,0 +1,8 @@
+author : henning1004
+name: AddSomeFurniture
+version: 0.8.0
+main: me.henning1004.addsomefurniture.AddSomeFurniture
+commands:
+   asf:
+      description: Check if your AddSomeFurniture is up to date.
+      usage: /<command>
