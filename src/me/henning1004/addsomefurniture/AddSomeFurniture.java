@@ -61,7 +61,22 @@ public class AddSomeFurniture extends JavaPlugin
 		if(getServer().getPluginManager().getPlugin("Spout") != null){
 		Bukkit.getLogger().log(Level.INFO, "\033[36m" + "[AddSomeFurniture] Enabled!" + "\033[0m");
 		Configuration.start();
-		Bukkit.getLogger().log(Level.INFO,"\033[36m" + "[AddSomeFurniture] Hooking into Vault..." + "\033[0m");
+		
+        
+        if (Configuration.confi.getString("HDTextures").equals("true")){
+        precacheHD();
+		loadtexturesHD();
+		}
+        else{
+        	precache();
+    		loadtextures();	
+        }
+        
+        if (Configuration.confi.getString("NoPermissions").equals("true")){
+        	Bukkit.getLogger().log(Level.INFO,"\033[31m" + "[AddSomeFurniture] Permissions disabled" + "\033[0m");
+    		}
+            else{
+            	Bukkit.getLogger().log(Level.INFO,"\033[36m" + "[AddSomeFurniture] Hooking into Vault..." + "\033[0m");
         if(getServer().getPluginManager().getPlugin("Vault") != null)
         {
             if(!setupPermissions())
@@ -75,15 +90,7 @@ public class AddSomeFurniture extends JavaPlugin
         {
         	Bukkit.getLogger().log(Level.WARNING,"\033[31m" + "[AddSomeFurniture] Vault plugin not found." + "\033[0m");
         }
-        
-        if (Configuration.textureHD.getString("Enable").equals("true")){
-        precacheHD();
-		loadtexturesHD();
-		}
-        else{
-        	precache();
-    		loadtextures();	
-        }
+            }
         
 		Bukkit.getLogger().log(Level.INFO,"\033[36m" + "[AddSomeFurniture] Loading modified pieces of furniture" + "\033[0m");
 		Blocks.registerBlocks(this);

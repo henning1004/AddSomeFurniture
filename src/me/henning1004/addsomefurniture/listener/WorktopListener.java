@@ -2,6 +2,7 @@ package me.henning1004.addsomefurniture.listener;
 
 
 import me.henning1004.addsomefurniture.AddSomeFurniture;
+import me.henning1004.addsomefurniture.config.Configuration;
 import me.henning1004.addsomefurniture.furniture.Blocks;
 
 
@@ -28,8 +29,8 @@ public class WorktopListener implements Listener
 		player = event.getPlayer();
 		block = (SpoutBlock) event.getClickedBlock();
 		
-		if(event.hasBlock() && (block.getCustomBlock() == Blocks.obsidianworktop || block.getCustomBlock() == Blocks.ironworktop || block.getCustomBlock() == Blocks.goldworktop || block.getCustomBlock() == Blocks.stoneworktop || block.getCustomBlock() == Blocks.craftingworktop)  && event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-			if(player.hasPermission("asf.action.worktop")){
+		if(event.hasBlock() && (block.getCustomBlock() == Blocks.obsidianworktop || block.getCustomBlock() == Blocks.ironworktop || block.getCustomBlock() == Blocks.goldworktop || block.getCustomBlock() == Blocks.stoneworktop || block.getCustomBlock() == Blocks.craftingworktop || block.getCustomBlock() == Blocks.woodenworktop)  && event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+			if(player.hasPermission("asf.action.worktop") || Configuration.confi.getString("NoPermissions").equals("true")){
 			player.openWorkbench(null, true);
 			return;
 			}

@@ -114,5 +114,27 @@ public class Configuration
         {
             e.printStackTrace();
         }
-    }   
+    } 
+    
+    public static MyConfiguration confi;
+
+    static 
+    {
+    	confi = new MyConfiguration();
+        if(load(confi, "config.yml"))
+        {
+        	confi = MyConfiguration.loadConfiguration("plugins/AddSomeFurniture/config.yml");
+            config.set();
+            save(confi);
+        }
+        config.set();
+        try
+        {
+        	confi.save();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }

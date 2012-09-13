@@ -9,8 +9,7 @@ public class HDTextureConfig
 
     public static void set() 
     {
-        if(!Configuration.textureHD.contains("Enable"))
-            Configuration.textureHD.set("Enable", "false");
+       
         if(!Configuration.textureHD.contains("Table HD Texture"))
             Configuration.textureHD.set("Table HD Texture", "https://dl.dropbox.com/u/62050717/AddSomeFurniture/HD%20Textures/text_table_HD.png");
         if(!Configuration.textureHD.contains("Chair HD Texture"))

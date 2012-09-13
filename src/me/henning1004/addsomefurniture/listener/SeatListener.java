@@ -3,6 +3,7 @@ package me.henning1004.addsomefurniture.listener;
 import java.util.List;
 
 import me.henning1004.addsomefurniture.AddSomeFurniture;
+import me.henning1004.addsomefurniture.config.Configuration;
 import me.henning1004.addsomefurniture.utils.Methods;
 //import net.minecraft.server.Block;
 
@@ -40,7 +41,7 @@ public class SeatListener implements Listener
 		item = Material.STONE_BUTTON;
 		
 		if(event.hasBlock() && Methods.isChair(block) && event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getPlayer().isSneaking()) {
-			if(player.hasPermission("asf.action.seat.chair")){
+			if(player.hasPermission("asf.action.seat.chair") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(player.getVehicle() != null)
 			{
 				player.getVehicle().remove();
@@ -77,7 +78,7 @@ public class SeatListener implements Listener
 		item = Material.STONE_BUTTON;
 		
 		if(event.hasBlock() && Methods.isThrone(block) && event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getPlayer().isSneaking()) {
-			if(player.hasPermission("asf.action.seat.throne")){
+			if(player.hasPermission("asf.action.seat.throne") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(player.getVehicle() != null)
 			{
 				player.getVehicle().remove();
