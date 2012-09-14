@@ -10,6 +10,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockFadeEvent;
+import org.bukkit.event.block.BlockPhysicsEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.getspout.spoutapi.block.SpoutBlock;
 
@@ -399,6 +401,26 @@ public class BlockListener implements Listener
 		}
 		else return;
 			
+	}
+	
+	@EventHandler(priority=org.bukkit.event.EventPriority.HIGH)
+	public void onBlockFade(BlockFadeEvent event)
+	{
+		SpoutBlock sb = (SpoutBlock)event.getBlock();
+		if(sb.getCustomBlock() != null && sb.getCustomBlock().getPlugin().equals(AddSomeFurniture.plugin))
+		{
+			event.setCancelled(true);
+		}
+	}
+
+	@EventHandler(priority=org.bukkit.event.EventPriority.HIGH)
+	public void onBlockPhysics(BlockPhysicsEvent event)
+	{
+		SpoutBlock sb = (SpoutBlock)event.getBlock();
+		if(sb.getCustomBlock() != null && sb.getCustomBlock().getPlugin().equals(AddSomeFurniture.plugin))
+		{
+			event.setCancelled(true);
+		}
 	}
 }
 

@@ -13,7 +13,7 @@ public class Carpet extends GenericCubeCustomBlock
 	private AddSomeFurniture plugin;
 	
 	public Carpet(AddSomeFurniture plugin,String name, int[] textureids) {
-		super(plugin, name, Material.REDSTONE_WIRE.getId(), new GenericCubeBlockDesign(plugin, plugin.carpet, textureids));
+		super(plugin, name, Material.RAILS.getId(), new GenericCubeBlockDesign(plugin, plugin.carpet, textureids));
 		this.setBlockDesign(new CarpetDesign(plugin, textureids));
 		this.setHardness(3F);
 		this.plugin = plugin;

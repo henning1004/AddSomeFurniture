@@ -27,6 +27,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.getspout.spoutapi.SpoutManager;
@@ -41,6 +42,7 @@ public class AddSomeFurniture extends JavaPlugin
 	public Texture other;
 	public Texture carpet;
 	public static Permission permission = null;
+	public static Plugin plugin = null;
 	
 	
 	public AddSomeFurniture()
@@ -61,7 +63,7 @@ public class AddSomeFurniture extends JavaPlugin
 		if(getServer().getPluginManager().getPlugin("Spout") != null){
 		Bukkit.getLogger().log(Level.INFO, "\033[36m" + "[AddSomeFurniture] Enabled!" + "\033[0m");
 		Configuration.start();
-		
+		plugin = this;
         
         if (Configuration.confi.getString("HDTextures").equals("true")){
         precacheHD();
@@ -112,8 +114,12 @@ public class AddSomeFurniture extends JavaPlugin
 		} catch (IOException e) {
 		    // Failed to submit the stats :-(
 		}
-		
+		if (Configuration.confi.getString("CheckForUpdates").equals("true")){
 		updateCheck();
+		}
+		else {
+			
+		}
 		}
 		else{
 			Bukkit.getLogger().log(Level.WARNING,"\033[31m" + "[AddSomeFurniture] Spoutplugin not found, can't load AddSomeFurniture!" + "\033[0m");

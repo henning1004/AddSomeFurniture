@@ -13,5 +13,7 @@ public class config
             Configuration.confi.set("NoPermissions", "false");
     	if(!Configuration.confi.contains("HDTextures"))
             Configuration.confi.set("HDTextures", "false");
+    	if(!Configuration.confi.contains("CheckForUpdates"))
+            Configuration.confi.set("CheckForUpdates", "true");
 }
 }
