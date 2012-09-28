@@ -41,16 +41,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.lamp)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.lampon);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.lamp);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -60,16 +63,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampS)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSon);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampS);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -79,16 +85,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampW)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWon);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampW);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -98,16 +107,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampSred)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSonred);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSred);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -117,16 +129,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampWred)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWonred);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWred);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -137,16 +152,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampSblue)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSonblue);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSblue);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -156,16 +174,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampWblue)
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWonblue);
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWblue);
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -176,16 +197,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampSgreen )
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSongreen );
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampSgreen );
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}
@@ -195,16 +219,19 @@ public class LampListener implements Listener
 			if(player.hasPermission("asf.action.lamp") || Configuration.confi.getString("NoPermissions").equals("true")){
 			if(block.getCustomBlock() == Blocks.neonlampWgreen )
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWongreen );
 				return;
 			}
 			else
 			{
+				event.setCancelled(true);
 				block.setCustomBlock(Blocks.neonlampWgreen );
 				return;
 			}
 			}
 			else{
+				event.setCancelled(true);
 				player.sendMessage(ChatColor.RED + "You are not allowed to switch lamps");
 				return;
 			}

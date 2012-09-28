@@ -84,7 +84,6 @@ public class Recipes_normal {
 		recipe.setIngredient('B', MaterialData.stick);
 		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
 		
-		
 		res_stonetable1 = new SpoutItemStack(Blocks.stonetable, 1);
 		recipe = new SpoutShapedRecipe(res_stonetable1);
 		recipe.shape("AAA", "B B", "B B");
@@ -99,6 +98,7 @@ public class Recipes_normal {
 		recipe.setIngredient('B', MaterialData.stick);
 		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
 
+		
 		res_woodchair = new SpoutItemStack(Blocks.woodchairN, 1);
 		recipe = new SpoutShapedRecipe(res_woodchair);
 		recipe.shape(" A ", "AAA", "B B");
@@ -169,7 +169,7 @@ public class Recipes_normal {
 		recipe.setIngredient('B', MaterialData.stick);
 		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
 		
-		res_tv = new SpoutItemStack(Blocks.tvN, 1);
+		res_tv = new SpoutItemStack(Blocks.tvS, 1);
 		recipe = new SpoutShapedRecipe(res_tv);
 		recipe.shape("AAA", "ABA", "ACA");
 		recipe.setIngredient('A', MaterialData.ironIngot);
@@ -228,18 +228,18 @@ public class Recipes_normal {
 		recipe.setIngredient('C', MaterialData.torch);
 		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
 		
-		res_neonlamp = new SpoutItemStack(Blocks.neonlampW, 2);
-		recipe = new SpoutShapedRecipe(res_neonlamp);
-		recipe.shape("BAB", "BBB");
-		recipe.setIngredient('A', MaterialData.torch);
-		recipe.setIngredient('B', MaterialData.glass);
-		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
-		
 		res_leatherthrone = new SpoutItemStack(Blocks.leatherthroneN, 1);
 		recipe = new SpoutShapedRecipe(res_leatherthrone);
 		recipe.shape("BAB", "AAA", "B B");
 		recipe.setIngredient('A', MaterialData.leather);
 		recipe.setIngredient('B', MaterialData.stick);
+		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
+		
+		res_neonlamp = new SpoutItemStack(Blocks.neonlampW, 2);
+		recipe = new SpoutShapedRecipe(res_neonlamp);
+		recipe.shape("BAB", "BBB");
+		recipe.setIngredient('A', MaterialData.torch);
+		recipe.setIngredient('B', MaterialData.glass);
 		SpoutManager.getMaterialManager().registerSpoutRecipe(recipe);
 		
 		res_neonlampred = new SpoutItemStack(Blocks.neonlampWred);

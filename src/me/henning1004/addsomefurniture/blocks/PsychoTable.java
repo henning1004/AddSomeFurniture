@@ -11,7 +11,7 @@ public class PsychoTable extends GenericCubeCustomBlock
 {
 	public PsychoTable(AddSomeFurniture plugin, String name, int[] textureids)
 	{
-		super(plugin, name, Material.PISTON_BASE.getId(), new GenericCubeBlockDesign(plugin, plugin.table,textureids));
+		super(plugin, name, Material.FENCE.getId(), new GenericCubeBlockDesign(plugin, plugin.table,textureids));
 		this.setBlockDesign(new PsychoTableDesign(plugin, textureids));
 		this.setHardness(3F);
 	}

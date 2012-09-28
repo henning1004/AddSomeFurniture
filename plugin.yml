@@ -1,6 +1,6 @@
 author : henning1004
 name: AddSomeFurniture
-version: 0.8.1
+version: 0.8.2
 main: me.henning1004.addsomefurniture.AddSomeFurniture
 commands:
    asf:

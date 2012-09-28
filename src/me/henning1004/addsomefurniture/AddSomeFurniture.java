@@ -16,6 +16,7 @@ import me.henning1004.addsomefurniture.recipes.Recipes_birch;
 import me.henning1004.addsomefurniture.recipes.Recipes_jungle;
 import me.henning1004.addsomefurniture.recipes.Recipes_spruce;
 import me.henning1004.addsomefurniture.listener.BlockListener;
+import me.henning1004.addsomefurniture.listener.QuestionListener;
 import me.henning1004.addsomefurniture.listener.SeatListener;
 import me.henning1004.addsomefurniture.listener.LampListener;
 import me.henning1004.addsomefurniture.listener.WorktopListener;
@@ -106,6 +107,7 @@ public class AddSomeFurniture extends JavaPlugin
 		getServer().getPluginManager().registerEvents(new SeatListener(this), this);
 		getServer().getPluginManager().registerEvents(new LampListener(this), this);
 		getServer().getPluginManager().registerEvents(new WorktopListener(this), this);
+		getServer().getPluginManager().registerEvents(new QuestionListener(this), this);
 
 		
 		try {

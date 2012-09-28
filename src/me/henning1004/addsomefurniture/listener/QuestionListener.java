@@ -14,30 +14,30 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.getspout.spoutapi.block.SpoutBlock;
 
-public class WorktopListener implements Listener
+public class QuestionListener implements Listener
 {
 	public Player player;
 	public SpoutBlock block;
 	
-	public WorktopListener(AddSomeFurniture plugin) 
+	public QuestionListener(AddSomeFurniture plugin) 
 	{
 	}
 	
 	@EventHandler
-	public void onWorktopClicked(PlayerInteractEvent event)
+	public void onMarkClicked(PlayerInteractEvent event)
 	{
 		player = event.getPlayer();
 		block = (SpoutBlock) event.getClickedBlock();
 		
-		if(event.hasBlock() && (block.getCustomBlock() == Blocks.obsidianworktop || block.getCustomBlock() == Blocks.ironworktop || block.getCustomBlock() == Blocks.goldworktop || block.getCustomBlock() == Blocks.stoneworktop || block.getCustomBlock() == Blocks.craftingworktop || block.getCustomBlock() == Blocks.woodenworktop)  && event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-			if(player.hasPermission("asf.action.worktop") || Configuration.confi.getString("NoPermissions").equals("true")){
+		if(event.hasBlock() && (block.getCustomBlock() == Blocks.qmark) && (event.getAction() == Action.RIGHT_CLICK_BLOCK) && (player.getItemInHand() != null)) {
+			if(player.hasPermission("asf.action.qmark") || Configuration.confi.getString("NoPermissions").equals("true")){
 				event.setCancelled(true);
-				player.openWorkbench(null, true);
+				player.sendMessage(new StringBuilder().append(ChatColor.GREEN).append("NAME: ").toString() + player.getItemInHand().getType().name() + " / ID: "+ player.getItemInHand().getTypeId() + ":" + player.getItemInHand().getDurability());
 			return;
 			}
 			else{
 				event.setCancelled(true);
-				player.sendMessage(ChatColor.RED + "You are not allowed to use wortops");
+				player.sendMessage(ChatColor.RED + "You are not allowed to use the question mark!");
 				return;
 			}
 		

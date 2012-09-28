@@ -8,6 +8,7 @@ import me.henning1004.addsomefurniture.blocks.PsychoChair;
 import me.henning1004.addsomefurniture.blocks.PsychoTable;
 import me.henning1004.addsomefurniture.blocks.PsychoThrone;
 import me.henning1004.addsomefurniture.blocks.SimpleChair;
+import me.henning1004.addsomefurniture.blocks.QuestionMark;
 import me.henning1004.addsomefurniture.blocks.Tv;
 import me.henning1004.addsomefurniture.blocks.Worktop;
 import me.henning1004.addsomefurniture.blocks.Lamp;
@@ -105,7 +106,8 @@ public class Blocks {
 	public static FlowerBox flowerbox1E;
 	public static Flower blueflower;
 	public static Flower whiterose;
-	
+	public static QuestionMark qmark;
+
 	public static void registerBlocks(AddSomeFurniture plugin) 
 	{
 		woodtable = new PsychoTable(plugin, "WoodTable", new int[]{0,0,0,0,0,0});
@@ -141,8 +143,8 @@ public class Blocks {
 		woodenbarstool = new Barstool(plugin, "WoodenBarstool", new int[]{0,1,2,0,0,0});
 		stonesimplechair = new SimpleChair(plugin, "Simple StoneChair", new int[] {48,49,50,0,0,0});
 		stonebarstool = new Barstool(plugin, "StonBarstool", new int[]{48,49,50,0,0,0});
-		tvS = new Tv(plugin, "Tv.s", new int[]{0,1,2,0,0,0}, "S");
 		tvN = new Tv(plugin, "Tv.n", new int[]{0,1,2,0,0,0}, "N");
+		tvS = new Tv(plugin, "Tv.s", new int[]{0,1,2,0,0,0}, "S");
 		tvW = new Tv(plugin, "Tv.w", new int[]{0,1,2,0,0,0}, "W");
 		tvE = new Tv(plugin, "Tv.e", new int[]{0,1,2,0,0,0}, "E");	
 		craftingworktop = new Worktop(plugin, "CraftingWorktop", new int[]{0,1,0,0,0,0});
@@ -189,12 +191,14 @@ public class Blocks {
 //		carpetmagenta = new Carpet(plugin, "Magenta Carpet", new int[]{208,209,0,0,0,0});
 //		carpetorange = new Carpet(plugin, "Orange Carpet", new int[]{80,81,0,0,0,0});
 //		carpetwhite = new Carpet(plugin, "White Carpet", new int[]{0,1,0,0,0,0});
+		flowerbox1N = new FlowerBox(plugin, "Flower Box.n", new int[]{48,49,50,53,54,0}, "N");
 		flowerbox1S = new FlowerBox(plugin, "Flower Box.s", new int[]{48,49,50,51,52,0}, "S");
 		flowerbox1W = new FlowerBox(plugin, "Flower Box.w", new int[]{48,49,50,51,53,0}, "W");
-		flowerbox1N = new FlowerBox(plugin, "Flower Box.n", new int[]{48,49,50,53,54,0}, "N");
 		flowerbox1E = new FlowerBox(plugin, "Flower Box.e", new int[]{48,49,50,52,54,0}, "E");
 		blueflower = new Flower(plugin, "Blue Flower", new int[]{54,0,0,0,0,0});
 		whiterose = new Flower(plugin, "White Rose", new int[]{53,0,0,0,0,0});
+		qmark = new QuestionMark(plugin, "Question mark", new int[]{65,65,64,64,0,0}, "N");
+
 	}
 
 }

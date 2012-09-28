@@ -195,5 +195,6 @@ public class SimpleChairDesign extends GenericBlockDesign
 		part4p3.addVertex(3, 1F, 0F, 0.875F);
 		setLightSource(20, 0, -1, 0);
 		this.setQuad(part4p3);
+		
 	}
 }

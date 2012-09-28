@@ -42,7 +42,8 @@ public class SeatListener implements Listener
 		
 		if(event.hasBlock() && Methods.isChair(block) && event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getPlayer().isSneaking()) {
 			if(player.hasPermission("asf.action.seat.chair") || Configuration.confi.getString("NoPermissions").equals("true")){
-			if(player.getVehicle() != null)
+				event.setCancelled(true);
+				if(player.getVehicle() != null)
 			{
 				player.getVehicle().remove();
 				return;
@@ -79,7 +80,8 @@ public class SeatListener implements Listener
 		
 		if(event.hasBlock() && Methods.isThrone(block) && event.getAction() == Action.RIGHT_CLICK_BLOCK && event.getPlayer().isSneaking()) {
 			if(player.hasPermission("asf.action.seat.throne") || Configuration.confi.getString("NoPermissions").equals("true")){
-			if(player.getVehicle() != null)
+				event.setCancelled(true);
+				if(player.getVehicle() != null)
 			{
 				player.getVehicle().remove();
 				return;
